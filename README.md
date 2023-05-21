@@ -1,7 +1,6 @@
 # Leaflet Map App
 
 This project is a Leaflet map application that utilizes the Neshan API to estimate the distance and duration between two points on the map based on the selected mode of transportation (car or motorcycle).
-<hr/>
 
 ## Features
 * Interactive map powered by Leaflet library
