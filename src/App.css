@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+/* Map */
+.map{
+  height: 100%;
+  background-color: rgb(53, 142, 177);
+}
+
+.map-container{
+  height: 100%;
+  width: 100%;
+  border: 2px solid #ffffff;
+}
+
+.map-container img:hover{
+  cursor: pointer;
+}
+
+.current-location{
+  position: fixed;
+  background-color: rgba(53, 142, 177, 0.99);
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  bottom: 3%;
+  right: 3%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border-radius: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.current-location img{
+  width: 70%;
+  height: 70%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.current-location:hover {
+  background-color: rgba(60, 145, 255, 0.99);
+}
+
+.bottom-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit{
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 46px;
+  border: 2px solid rgb(53, 142, 177);
+  border-radius: 15px;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.submit:hover {
+  background-color: rgba(32, 194, 32, 0.7);
+}
+
+.device{
+  margin: 0;
+  padding: 0;
+}
+.car {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: calc(3% + 55px );
+  left: 3%;
+  z-index: 999;
+  padding: 2px;
+}
+
+.selected {
+  border: 2px solid rgb(53, 142, 177);
+  border-radius: 15px;
+}
+
+.motorcycle{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 3%;
+  left: 3%;
+  z-index: 999;
+  padding: 2px;
+}
+
+.reset{
+  position: fixed;
+  background-color: rgba(53, 142, 177, 0.99);
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  bottom: calc(3% + 55px);
+  right: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.reset img{
+  width: 50%;
+  height: 50%;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 999;
+  bottom: 4%;
+  /* right: calc(3% + 50px); */
+}
+
+.search-bar input {
+  height: 40px;
+  /* width: 200px; */
+  border: 2px solid rgb(53, 142, 177);
+  border-radius: 15px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+}
+
+.search-result{
+  /* position: fixed; */
+  text-align: center;
+  padding: 0 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.search-result p:hover{
+  color: rgb(53, 142, 177);
+  cursor: pointer;
+}
+
+.close-popup{
+  width: 30%;
+  height: 30%;
+  margin-left: 10%;
 }
